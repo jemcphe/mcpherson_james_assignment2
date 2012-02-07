@@ -34,7 +34,13 @@ var getGolfBallCount = function(ballCount) {
 		console.log("I started with " + currentBallCount + " golf balls.  Poor play has left me with " + ballCount + " golf balls.");
 	}
 	return ballCount;
+};
+
+var quenchThirst = function(drink, opinion) {
+	var message = console.log("Looks like we have plenty of " + drink + ", which I " + opinion + ".");
+	return message;
 }
 whereToPlay("Thundercreek");
 readyToGolf(false , 4);
 getGolfBallCount();
+quenchThirst("Bud Light", "love");
