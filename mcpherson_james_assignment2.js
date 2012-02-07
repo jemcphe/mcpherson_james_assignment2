@@ -27,10 +27,11 @@ var readyToGolf = function (isRaining, playerCount) {
 var getGolfBallCount = function(ballCount) {
 	var ballCount = 10;
 	var currentBallCount = ballCount;
-	while (currentBallCount > 1) {
-		currentBallCount-= 1;
-		var lostBall = currentBallCount - 1;
-		console.log("I had " + ballCount + " golf balls.  Poor play has left me with " + lostBall + " golf balls.");
+	while (ballCount >= 1) {
+		//currentBallCount-= 1;
+		ballCount--;
+		//var lostBall = ballCount;
+		console.log("I started with " + currentBallCount + " golf balls.  Poor play has left me with " + ballCount + " golf balls.");
 	}
 	return ballCount;
 }
