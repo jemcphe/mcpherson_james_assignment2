@@ -39,8 +39,25 @@ var getGolfBallCount = function(ballCount) {
 var quenchThirst = function(drink, opinion) {
 	var message = console.log("Looks like we have plenty of " + drink + ", which I " + opinion + ".");
 	return message;
-}
+};
+
+var playerInfo = function (name	, age) {
+	var playerNames = ["James", "Mac", "Nick", "Jeremy"];
+	var playerAges = [46, 25, 19, 40];
+	
+	for(var name = [0]; name < playerNames.length; name++) {
+		var playerName = playerNames[name];
+			for(var age = [0]; age < playerAges.length; age++) {
+				var playerAge = playerAges[age];
+				var message = console.log("Player: "+ playerName + " Age: " + playerAge);
+				return message;
+			}
+	}	
+};
+
+
 whereToPlay("Thundercreek");
 readyToGolf(false , 4);
 getGolfBallCount();
 quenchThirst("Bud Light", "love");
+playerInfo();
