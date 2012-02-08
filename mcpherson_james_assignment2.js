@@ -61,10 +61,11 @@ var playerInfo = function (name	, age) {
 intro("Mac", 4);
 whereToPlay("Arrowhead");
 readyToGolf(false , 4);
-getGolfBallCount(10);
-quenchThirst("water", "love");
 playerInfo(0, 0);
 playerInfo(1, 1);
 playerInfo(2, 2);
 playerInfo(3, 3);
+quenchThirst("water", "love");
+getGolfBallCount(10);
+
 
