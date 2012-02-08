@@ -1,8 +1,13 @@
 alert("JavaScript works!");
-
-//var courseName = ["Arrowhead", "Thundercreek", "Country Club"];
+var hostName = "Mac"
+var courseNames = ["Arrowhead", "Thundercreek", "Country Club"];
 var playerCount = 0;
-//var isRaining = false;
+
+var intro = function(host, players) {
+	var welcomeMessage = console.log("Welcome " + hostName + "! You are hosting a golf outing today. We need " + players + 
+		" golfers to play.");
+		return welcomeMessage;
+};
 
 var whereToPlay = function(courseName){
 	if(courseName === "Arrowhead") {
@@ -44,20 +49,22 @@ var quenchThirst = function(drink, opinion) {
 var playerInfo = function (name	, age) {
 	var playerNames = ["James", "Mac", "Nick", "Jeremy"];
 	var playerAges = [46, 25, 19, 40];
+	var playerName = playerNames[name];
+	var playerAge = playerAges[age]
 	
-	for(var name = [0]; name < playerNames.length; name++) {
-		var playerName = playerNames[name];
-			for(var age = [0]; age < playerAges.length; age++) {
-				var playerAge = playerAges[age];
-				var message = console.log("Player: "+ playerName + " Age: " + playerAge);
-				return message;
-			}
+	for(var name  = 0; name < playerNames.length; name++) {
+		var message = console.log("Player: "+ playerName + " Age: " + playerAge);
+		return message;
 	}	
 };
 
-
-whereToPlay("Thundercreek");
+intro("Mac", 4);
+whereToPlay("Arrowhead");
 readyToGolf(false , 4);
-getGolfBallCount();
-quenchThirst("Bud Light", "love");
-playerInfo();
+getGolfBallCount(10);
+quenchThirst("water", "love");
+playerInfo(0, 0);
+playerInfo(1, 1);
+playerInfo(2, 2);
+playerInfo(3, 3);
+
